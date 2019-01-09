@@ -1,0 +1,114 @@
+{
+  "name": "page-uilder",
+  "version": "0.0.1",
+  "description": "React Ebook Builder",
+  "main": "index.jsx",
+  "scripts": {
+    "start": "CHOKIDAR_USEPOLLING=true webpack-dev-server --mode development",
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf ./dist",
+    "compile": "NODE_ENV=production webpack --mode production",
+    "lint": "eslint src/**/*.*",
+    "sass:watch": "sass --watch src/styles/scss:src/styles/css",
+    "sass:build": "sass --update src/styles/scss:src/styles/css",
+    "test": "NODE_ENV=test jest --coverage && eslint tests/**/*.*"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.jsx"
+    ],
+    "setupFiles": [
+      "./tests/index.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "testRegex": "tests/.*\\.(js|jsx)$",
+    "testPathIgnorePatterns": [
+      "tests/index.js"
+    ],
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samcart/ui-template-builder.git"
+  },
+  "author": "Zach Moore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zachmoore12/page-builder/issues"
+  },
+  "homepage": "https://github.com/zachmoore12/page-builder#readme",
+  "devDependencies": {
+    "axios-mock-adapter": "^1.15.0",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.2.0",
+    "babel-plugin-jsx-control-statements": "^4.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.1.2",
+    "chai-enzyme": "^1.0.0-beta.1",
+    "chai-jsx": "^1.0.1",
+    "cheerio": "^1.0.0-rc.2",
+    "css-loader": "^0.28.11",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.4.0",
+    "enzyme-to-json": "^3.3.4",
+    "eslint": "4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.0",
+    "eslint-plugin-react": "^7.10.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.3.0",
+    "jest-enzyme": "^6.0.4",
+    "jsdom": "^11.11.0",
+    "jsx-loader": "^0.13.2",
+    "mocha": "^5.2.0",
+    "node-sass": "^4.9.3",
+    "rc-util": "^4.5.1",
+    "react-hot-loader": "^4.3.3",
+    "react-svg-loader": "^2.1.0",
+    "redux-mock-store": "^1.5.3",
+    "sass-loader": "^6.0.7",
+    "sinon": "^6.1.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-hot-middleware": "^2.22.2"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "bluebird": "^3.5.1",
+    "classnames": "^2.2.6",
+    "eslint-plugin-json": "^1.2.1",
+    "eslint-plugin-jsx-control-statements": "^2.2.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "fs": "0.0.1-security",
+    "jsx-control-statements": "^3.2.8",
+    "lodash": "^4.17.11",
+    "object-extender": "^2.0.4",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.6.1",
+    "uuid": "^3.3.2",
+    "yarn": "^1.7.0"
+  }
+}

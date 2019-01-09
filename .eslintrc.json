@@ -1,0 +1,14 @@
+{
+    "extends": ["airbnb", "plugin:jsx-control-statements/recommended"],
+    "env": {
+      "jest": true,
+      "browser": true
+    },
+    "plugins": ["react", "json", "jsx-control-statements"],
+    "parser": "babel-eslint",
+    "rules": {
+      "jsx-a11y/label-has-for": "off",
+      "jsx-a11y/label-has-associated-control": "off",
+      "react/jsx-no-undef": [2, { "allowGlobals": true }]
+    }
+}

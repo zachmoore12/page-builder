@@ -59,3 +59,15 @@ typings/
 
 # next.js build output
 .next
+
+# jest snapshots
+tests/*/*.snap
+
+# production build
+dist/
+
+# phpstorm indexing
+.idea/*
+
+# remove compiled CSS from git
+src/styles/css/*

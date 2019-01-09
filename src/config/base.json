@@ -1,0 +1,13 @@
+{
+  "api": {
+    "render": {
+      "url": "http://localhost:30002"
+    },
+    "storage": {
+      "url": "http://localhost:30002"
+    },
+    "assets": {
+      "url": "http://localhost:30001"
+    }
+  }
+}
